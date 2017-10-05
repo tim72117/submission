@@ -1,0 +1,205 @@
+<table>
+    <tr>
+        <td class="column top chinese">通訊作者</td>
+        <td>
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="中文" [(ngModel)]="submission.author_cht">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column bottom english">Corresponding Author</td>
+        <td class="space">
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="English" [(ngModel)]="submission.author_eng">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column top chinese">投稿題目</td>
+        <td>
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="中文" [(ngModel)]="submission.title_cht">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column bottom english">Title of the paper</td>
+        <td class="space">
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="English" [(ngModel)]="submission.title_eng">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column top chinese">共同撰稿者</td>
+        <td class="space" rowspan="2" style="width: 600px">
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="1" [(ngModel)]="submission.co_author1">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="2" [(ngModel)]="submission.co_author2">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="3" [(ngModel)]="submission.co_author3">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="4" [(ngModel)]="submission.co_author4">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="5" [(ngModel)]="submission.co_author5">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="6" [(ngModel)]="submission.co_author6">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="7" [(ngModel)]="submission.co_author7">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="8" [(ngModel)]="submission.co_author8">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column bottom english">Co-authors</td>
+    </tr>
+    <tr>
+        <td class="column top chinese">服務單位</td>
+        <td>
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="中文" [(ngModel)]="submission.affiliation_cht">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column bottom english">Affiliation</td>
+        <td class="space">
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="English" [(ngModel)]="submission.affiliation_eng">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column top chinese">職稱</td>
+        <td>
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="中文" [(ngModel)]="submission.position_cht">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column bottom english">Position</td>
+        <td class="space">
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="English" [(ngModel)]="submission.position_eng">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column">
+            <div class="chinese">學術專長</div>
+            <div class="english">Specialized Areas</div>
+        </td>
+        <td class="fat">
+            <md-form-field style="width: 90%">
+            <input type="text" mdInput placeholder="" [(ngModel)]="submission.specialized_areas">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column">
+            <div class="chinese">通訊方式</div>
+            <div class="english">Address</div>
+        </td>
+        <td class="fat">
+            <md-form-field style="width: 90%">
+                <input type="text" mdInput placeholder="" [(ngModel)]="submission.address">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column">
+            <div class="chinese">電話</div>
+            <div class="english">Phone</div>
+        </td>
+        <td class="fat">
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="Office" [(ngModel)]="submission.phone_office">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="Home" [(ngModel)]="submission.phone_home">
+            </md-form-field>
+            <md-form-field style="width: 30%">
+                <input type="text" mdInput placeholder="Mobile" [(ngModel)]="submission.phone_mobile">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column">
+            <div class="chinese">傳真</div>
+            <div class="english">Fax</div>
+        </td>
+        <td class="fat">
+            <md-form-field style="width: 90%">
+                <input type="text" mdInput placeholder="" [(ngModel)]="submission.fax">
+            </md-form-field>
+        </td>
+    </tr>
+    <tr>
+        <td class="column">
+            <div class="chinese">電子郵件</div>
+            <div class="english">Email</div>
+        </td>
+        <td class="fat">
+            <md-form-field style="width: 90%">
+                <input type="text" mdInput placeholder="" [(ngModel)]="submission.email">
+            </md-form-field>
+        </td>
+    </tr>
+</table>
+
+<md-chip-list mdPrefix *ngIf="submission.path">
+    <md-chip [selectable]="selectable" [removable]="true" (remove)="remove()">
+        {{ submission.name }}
+        <md-icon mdChipRemove *ngIf="true">cancel</md-icon>
+    </md-chip>
+</md-chip-list>
+<div ng2FileDrop
+    [ngClass]="{'nv-file-over': hasBaseDropZoneOver}"
+    (fileOver)="fileOverBase($event)"
+    [uploader]="uploader"
+    class="my-drop-zone" fxLayout="column" fxLayoutAlign="center center" style="margin-top: 10px">
+    拖曳檔案到這
+    <div *ngFor="let item of uploader.queue">
+        <button md-raised-button (click)="item.upload()" [disabled]="item.isReady || item.isUploading || item.isSuccess">上傳{{ item?.file?.name }}</button>
+    </div>
+</div>
+
+<style>
+.my-drop-zone { border: dotted 3px lightgray;height: 100px }
+.nv-file-over { border: dotted 3px red; } /* Default class applied to drop zones on over */
+td.column {
+    width: 200px;
+    font-weight: bold;
+}
+td.top {
+    vertical-align: bottom;
+}
+td.bottom {
+    vertical-align: top;
+    padding-top: 10px;
+}
+.chinese {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.english {
+    margin-top: 11px;
+}
+td.space {
+    padding-bottom: 10px;
+}
+td.fat {
+    padding-top: 25px;
+}
+</style>

@@ -1,0 +1,29 @@
+<md-table #table [dataSource]="dataSource">
+    <ng-container mdColumnDef="author">
+         <md-header-cell *mdHeaderCellDef> 通訊作者 </md-header-cell>
+        <md-cell *mdCellDef="let submission"> {{submission.author_cht}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="title">
+        <md-header-cell *mdHeaderCellDef> 投稿題目 </md-header-cell>
+        <md-cell *mdCellDef="let submission"> {{submission.title_cht}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="affiliation">
+         <md-header-cell *mdHeaderCellDef> 服務單位 </md-header-cell>
+        <md-cell *mdCellDef="let submission"> {{submission.affiliation_cht}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="download">
+        <md-header-cell *mdHeaderCellDef> 下載 </md-header-cell>
+        <md-cell *mdCellDef="let submission"> <a href="/api/download/submission/{{ submission.id }}">{{submission.name}}</a></md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="actions">
+        <md-header-cell *mdHeaderCellDef> 詳細資料 </md-header-cell>
+        <md-cell *mdCellDef="let submission"> <button md-raised-button color="primary" (click)="openSubmittedDialog(submission)">詳細資料</button> </md-cell>
+    </ng-container>
+
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+</md-table>
