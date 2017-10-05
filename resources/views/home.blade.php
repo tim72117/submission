@@ -1,23 +1,16 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>技術及職業教育學報</title>
+    <base href="/">
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta property="csrf-token" name="csrf-token" content="{{ csrf_token() }}">
+</head>
+<body class="mat-app-background">
+    <app-root></app-root>
+    <script type="text/javascript" src="js/inline.bundle.js"></script><script type="text/javascript" src="js/polyfills.bundle.js"></script><script type="text/javascript" src="js/styles.bundle.js"></script><script type="text/javascript" src="js/vendor.bundle.js"></script><script type="text/javascript" src="js/main.bundle.js"></script></body>
+</html>

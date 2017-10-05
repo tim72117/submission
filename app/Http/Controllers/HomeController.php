@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -17,11 +18,25 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Redirect to main page.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        return redirect(Auth::user()->admin ? 'reviewer' : 'submitted');
+    }
+
+    public function reviewer()
+    {
+        if (! Auth::user()->admin) {
+            abort(404);
+        }
+
+        return view('home');
+    }
+
+    public function submitted()
     {
         return view('home');
     }
