@@ -16,7 +16,7 @@ import { ReviewerService } from './reviewer/reviewer.service';
 import { MainComponent } from './submission/main.component';
 import { SubmittedDialog } from './submission/submitted.dialog.component';
 import { SubmitDialog } from './submission/submit.dialog.component';
-import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file-upload';
+import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
 
 @NgModule({
     declarations: [
@@ -25,9 +25,7 @@ import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file
         SubmissionComponent,
         MainComponent,
         SubmittedDialog,
-        SubmitDialog,
-        FileSelectDirective,
-        FileDropDirective
+        SubmitDialog
     ],
     imports: [
         BrowserModule,
@@ -47,6 +45,7 @@ import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload/ng2-file
         MdIconModule,
         MdChipsModule,
         MdProgressBarModule,
+        FileUploadModule,
         RouterModule.forRoot([
         {
             path: '',

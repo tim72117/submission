@@ -16,7 +16,7 @@ import { Submission } from '../submission/submission.interface';
         <md-dialog-actions fxLayout="row">
             <button md-button md-dialog-close>取消</button>
             <span fxFlex></span>
-            <button md-raised-button color="primary" (click)="submit(submission)">確定送出</button>
+            <button md-raised-button color="primary" (click)="submit()">確定送出</button>
         </md-dialog-actions>
         <md-progress-bar mode="indeterminate" *ngIf="saving"></md-progress-bar>
     `,
