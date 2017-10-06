@@ -1,15 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
 
+import { MdInputModule, MdCardModule, MdToolbarModule, MdButtonModule, MdTableModule, MdDialogModule, MdListModule, MdIconModule, MdChipsModule, MdProgressBarModule } from '@angular/material';
+
 import { AppComponent } from './app.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdAutocompleteModule, MdInputModule, MdCardModule, MdToolbarModule, MdButtonModule, MdTableModule, MdDialogModule, MdListModule, MdIconModule, MdChipsModule, MdProgressBarModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FlexLayoutModule } from '@angular/flex-layout';
-
 import { ReviewerComponent } from './reviewer/reviewer.component';
 import { SubmissionComponent } from './submission/submission.component';
 import { ReviewerService } from './reviewer/reviewer.service';
@@ -25,27 +24,11 @@ import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
         SubmissionComponent,
         MainComponent,
         SubmittedDialog,
-        SubmitDialog
+        SubmitDialog,
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        MdAutocompleteModule,
-        MdInputModule,
-        FormsModule,
-        ReactiveFormsModule,
-        FlexLayoutModule,
-        MdCardModule,
-        MdToolbarModule,
-        MdButtonModule,
-        MdTableModule,
-        HttpModule,
-        MdDialogModule,
-        MdListModule,
-        MdIconModule,
-        MdChipsModule,
-        MdProgressBarModule,
-        FileUploadModule,
         RouterModule.forRoot([
         {
             path: '',
@@ -60,7 +43,21 @@ import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
             path: 'submitted',
             component: MainComponent
         }
-        ])
+        ]),
+        FormsModule,
+        FlexLayoutModule,
+        HttpModule,
+        MdInputModule,
+        MdCardModule,
+        MdToolbarModule,
+        MdButtonModule,
+        MdTableModule,
+        MdDialogModule,
+        MdListModule,
+        MdIconModule,
+        MdChipsModule,
+        MdProgressBarModule,
+        FileUploadModule,
     ],
     entryComponents: [SubmittedDialog, SubmitDialog],
     providers: [ReviewerService],

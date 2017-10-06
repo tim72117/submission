@@ -13,7 +13,13 @@ export class ReviewerService  {
     getSubmissions(): Promise<Submission[]> {
         return this.http.get('/api/submissions')
             .toPromise()
-            .then(response => response.json() as Submission[])
+            .then(response => response.json().submissions as Submission[])
+    }
+
+    getMySubmissions(): Promise<Submission[]> {
+        return this.http.get('/api/mySubmissions')
+            .toPromise()
+            .then(response => response.json().submissions as Submission[])
     }
 
     createSubmission(submission) {

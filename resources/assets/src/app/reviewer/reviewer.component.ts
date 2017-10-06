@@ -29,8 +29,6 @@ export class ReviewerComponent {
 
     constructor(private reviewerService: ReviewerService, public dialog: MdDialog) {
         this.dataSource = new ExampleDataSource(reviewerService);
-        this.reviewerService.getSubmissions().then((response) => this.submissions = response);
-
     }
 
     openSubmittedDialog(submitted): void {

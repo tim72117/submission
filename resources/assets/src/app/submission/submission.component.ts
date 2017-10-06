@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+
 import { MdChipList } from '@angular/material';
 
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';

@@ -21,8 +21,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('reviewer', 'HomeController@reviewer');
 Route::get('submitted', 'HomeController@submitted');
 
+Route::any('api/mySubmissions', function () {
+    return  ['submissions' => Auth::user()->submissions];
+});
+
 Route::any('api/submissions', function () {
-    return  Auth::user()->submissions;
+    return  ['submissions' => App\Submission::all()];
 });
 
 Route::any('api/createSubmission', function (Illuminate\Http\Request $request) {

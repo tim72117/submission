@@ -14,7 +14,7 @@ export class MainComponent {
     progressing = true
 
     constructor(private reviewerService: ReviewerService, public dialog: MdDialog) {
-        this.reviewerService.getSubmissions().then((response) => { this.submitteds = response; this.progressing = false; } );
+        this.reviewerService.getMySubmissions().then((response) => { this.submitteds = response; this.progressing = false; } );
     }
 
     openSubmittedDialog(submitted): void {
