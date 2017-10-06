@@ -12,6 +12,6 @@ export class AppComponent {
     constructor(private http:Http) { }
 
     logout() {
-        this.http.post('/logout', {}).toPromise().then(() => window.location.reload() );
+        this.http.post('/logout', {}).toPromise().then(() => window.location.replace('/home') );
     }
 }
