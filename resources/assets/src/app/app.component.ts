@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Http } from '@angular/http';
 
 @Component({
     selector: 'app-root',
@@ -8,4 +8,10 @@ import { FormControl } from '@angular/forms';
 })
 export class AppComponent {
     title = 'app';
+
+    constructor(private http:Http) { }
+
+    logout() {
+        this.http.post('/logout', {}).toPromise().then(() => window.location.reload() );
+    }
 }
