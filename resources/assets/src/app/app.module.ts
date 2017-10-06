@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HttpModule } from '@angular/http';
 
-import { MdInputModule, MdCardModule, MdToolbarModule, MdButtonModule, MdTableModule, MdDialogModule, MdListModule, MdIconModule, MdChipsModule, MdProgressBarModule } from '@angular/material';
+import { MatInputModule, MatCardModule, MatToolbarModule, MatButtonModule, MatTableModule, MatDialogModule, MatListModule, MatIconModule, MatChipsModule, MatProgressBarModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ReviewerComponent } from './reviewer/reviewer.component';
@@ -47,16 +47,16 @@ import { FileUploadModule } from 'ng2-file-upload/ng2-file-upload';
         FormsModule,
         FlexLayoutModule,
         HttpModule,
-        MdInputModule,
-        MdCardModule,
-        MdToolbarModule,
-        MdButtonModule,
-        MdTableModule,
-        MdDialogModule,
-        MdListModule,
-        MdIconModule,
-        MdChipsModule,
-        MdProgressBarModule,
+        MatInputModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatTableModule,
+        MatDialogModule,
+        MatListModule,
+        MatIconModule,
+        MatChipsModule,
+        MatProgressBarModule,
         FileUploadModule,
     ],
     entryComponents: [SubmittedDialog, SubmitDialog],

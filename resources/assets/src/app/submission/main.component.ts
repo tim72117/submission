@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MdDialog, MdDialogRef, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { ReviewerService } from '../reviewer/reviewer.service';
 import { SubmitDialog } from '../submission/submit.dialog.component';
@@ -7,13 +7,13 @@ import { SubmittedDialog } from '../submission/submitted.dialog.component';
 
 @Component({
     templateUrl: './main.component.html',
-    providers: [MdDialog]
+    providers: [MatDialog]
 })
 export class MainComponent {
     submitteds = [];
     progressing = true
 
-    constructor(private reviewerService: ReviewerService, public dialog: MdDialog) {
+    constructor(private reviewerService: ReviewerService, public dialog: MatDialog) {
         this.reviewerService.getMySubmissions().then((response) => { this.submitteds = response; this.progressing = false; } );
     }
 

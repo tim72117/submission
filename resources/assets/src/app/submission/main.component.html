@@ -1,19 +1,19 @@
 <div fxLayout="column" fxLayoutAlign="start center" style="margin-top: 10px">
-    <button md-raised-button color="primary" (click)="openSubmitDialog()">投稿</button>
-    <md-card style="width: 600px;margin-top: 10px">
-        <md-progress-bar mode="indeterminate" *ngIf="progressing"></md-progress-bar>
-        <md-card-subtitle *ngIf="! progressing && submitteds.length === 0">尚未有任何投稿</md-card-subtitle>
-        <md-list>
-            <md-list-item *ngFor="let submitted of submitteds">
-                <md-icon mdListIcon >insert_drive_file</md-icon>
-                <h1 mdLine> {{submitted.author_cht}} </h1>
-                <p mdLine>
+    <button mat-raised-button color="primary" (click)="openSubmitDialog()">投稿</button>
+    <mat-card style="width: 600px;margin-top: 10px">
+        <mat-progress-bar mode="indeterminate" *ngIf="progressing"></mat-progress-bar>
+        <mat-card-subtitle *ngIf="! progressing && submitteds.length === 0">尚未有任何投稿</mat-card-subtitle>
+        <mat-list>
+            <mat-list-item *ngFor="let submitted of submitteds">
+                <mat-icon matListIcon >insert_drive_file</mat-icon>
+                <h1 matLine> {{submitted.author_cht}} </h1>
+                <p matLine>
                     <span> {{submitted.title_cht}} </span>
                 </p>
-                <button md-icon-button (click)="openSubmittedDialog(submitted)">
-                    <md-icon>edit</md-icon>
+                <button mat-icon-button (click)="openSubmittedDialog(submitted)">
+                    <mat-icon>edit</mat-icon>
                 </button>
-            </md-list-item>
-        </md-list>
-    </md-card>
+            </mat-list-item>
+        </mat-list>
+    </mat-card>
 </div>

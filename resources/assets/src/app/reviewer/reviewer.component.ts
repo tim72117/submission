@@ -1,6 +1,5 @@
 import { Injectable, Inject }    from '@angular/core';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-// import { MdTableModule } from '@angular/material';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/merge';
@@ -9,7 +8,7 @@ import 'rxjs/add/operator/startWith';
 import 'rxjs/add/operator/switchMap';
 
 import { ReviewerService } from './reviewer.service';
-import {MdDialog, MdDialogRef, MD_DIALOG_DATA} from '@angular/material';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { SubmissionComponent } from '../submission/submission.component';
 import { Submission } from '../submission/submission.interface';
@@ -18,7 +17,7 @@ import { SubmittedDialog } from '../submission/submitted.dialog.component';
 @Component({
     selector: 'app-reviewer',
     templateUrl: './reviewer.component.html',
-    providers: [MdDialog]
+    providers: [MatDialog]
 })
 
 @Injectable()
@@ -27,7 +26,7 @@ export class ReviewerComponent {
     submissions = [];
     displayedColumns = ['author', 'title', 'affiliation', 'download', 'actions'];
 
-    constructor(private reviewerService: ReviewerService, public dialog: MdDialog) {
+    constructor(private reviewerService: ReviewerService, public dialog: MatDialog) {
         this.dataSource = new ExampleDataSource(reviewerService);
     }
 

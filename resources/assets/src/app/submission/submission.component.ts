@@ -1,7 +1,5 @@
 import { Component, Input } from '@angular/core';
 
-import { MdChipList } from '@angular/material';
-
 import { FileUploader } from 'ng2-file-upload/ng2-file-upload';
 
 import { Submission } from '../submission/submission.interface';
